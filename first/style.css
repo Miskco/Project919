@@ -60,6 +60,10 @@ main {
   flex-wrap: wrap;
 }
 
+main.no-flex {
+  display: block;
+}
+
 main section {
   padding: 1rem;
 }
@@ -100,4 +104,65 @@ p {
 
 section.right ul {
   margin-left: 2rem;
+}
+
+.player {
+  margin: 2rem;
+  border: 3px solid burlywood;
+  padding: 1rem;
+}
+
+.player h4 {
+  color:aquamarine;
+  font-size: 1.5rem;
+}
+
+.player h5 {
+  color:aquamarine;
+  font-size: 1.05rem;
+}
+
+div.china {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1rem;
+}
+
+div.image {
+  flex: 1 1 300px;
+}
+
+div.image img {
+  width: 100%;
+}
+
+div.china div.info {
+  flex: 3 1 600px;
+  padding: 2rem;
+}
+
+div.competition {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1rem;
+}
+
+div.competition div.text {
+  flex: 5 1 300px;
+  padding: 1rem;
+}
+
+div.competition div.text h3 {
+  font-size: 2rem;
+  color:aqua;
+}
+
+#piechart {
+  flex: 1 1 300px;
+}
+
+@media screen and (max-width: 600px) {
+  header nav ul {
+    flex-direction: column;
+  }
 }

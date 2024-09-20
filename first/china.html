@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./style.css" />
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+
+        var data = google.visualization.arrayToDataTable([
+          ['Task', 'Hours per Day'],
+          ['Work',     11],
+          ['Eat',      2],
+          ['Commute',  2],
+          ['Watch TV', 2],
+          ['Sleep',    7]
+        ]);
+
+        var options = {
+          title: 'My Daily Activities'
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+        chart.draw(data, options);
+      }
+    </script>
+    <title>围棋</title>
+  </head>
+  <body>
+    <header>
+      <div class="top">
+        <h1>围棋</h1>
+        <h3>sdfsdfsdfsdklsjdsoi;fosdi;mfsodpf,ms;dlcv</h3>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./hongkong.html">Hong Kong</a></li>
+          <li><a class="active" href="#">China</a></li>
+          <li><a href="./japan.html">Japan</a></li>
+          <li><a href="./korea.html">Korea</a></li>
+        </ul> 
+    </header>
+    <main>
+        <section>
+            <div class="china">
+                <div class="image">
+                <img src="./images/Nihon_Ki-in_Headquarter_(2016-05-05)_5.jpg" alt="china"/>
+                </div>
+            <div class="info">
+                <p>werwerdsdfdsffffffffffffffffrewqfdgdasgfdfgdxczvxvxcvc</p>
+                <p>dsfwqewqiouhkljhvxckjlzhvuiklhxcvxcz</p>
+                <p>sdfqweqweqwe:</p>
+                <ul>
+                    <li>11111</li>
+                    <li>22222</li>
+                    <li>33333</li>
+                </ul>
+            </div>
+            </div>
+            <hr/>
+            <div class="competition">
+                <div class="text">
+                    <h3>sdfqweweqewq</h3>
+                    <p  >qweqweqwewqe</p>
+                    <p>qweqwxcv udfskjhldsajkdsfkjlhdsfkjhdsafsdfa</p>
+                    <p>qweqwewq:</p>
+                    <ul>
+                        <li>213213123</li>
+                        <li>12213123213</li>
+                        <li>123213213</li>
+                        <li>123123122321</li>
+                    </ul>
+                </div>
+                <div id="piechart"></div>
+            </div>
+        </section>
+    
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/canvas-nest.js/2.0.4/canvas-nest.js" integrity="sha512-P+NGabN/TJDOnCVOFJO+E06TBm4i+M8dTT91lWg/8UpwLrzicEXIypmABPpA47D0x6r+yxFHjYIZKWhc1h7xlQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  </body>
+</html>
