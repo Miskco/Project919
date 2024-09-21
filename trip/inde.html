@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="./styles/style.css" />
   </head>
   <body>
+    <img class="fixed-image" src="./images/富士山2.jpg" alt="fixed-image"/>
     <header>
       <section class="logo">
         <img src="./images/網站Logo.svg" alt="japan trip logo" />
@@ -38,8 +39,71 @@
     <main>
       <section class="background-img">
         <div class="filter"></div>
-        <h3>放松身心放松身心放松身心放松身心放松身心</h3>
+        <h3>放松身心放松身心<br>放松身心放松身心放松身心</h3>
+      </section>
+
+      <section class="info-circles">
+        <h3>游玩主题</h3>
+        <div class="circles">
+          <div class="circle">
+            <img src="./images/北海道雪景.jpg" alt="北海道雪景" />
+            <p>北海道雪景北海道雪景</p>
+          </div>
+          <div class="circle">
+            <img src="./images/日本壽司.jpg" alt="日本壽司" />
+            <p>日本壽司日本壽司日本壽司日本壽司</p>
+          </div>
+          <div class="circle">
+            <img src="./images/富士山.jpg" alt="富士山" />
+            <p>富士山富士山富士山富士山富士山富士山</p>
+          </div>
+          <div class="circle">
+            <img src="./images/清水寺.jpg" alt="清水寺" />
+            <p>清水寺清水寺清水寺清水寺清水寺清水寺</p>
+          </div>
+        </div>
+      </section>
+      <section class="empty-container">
+        <h3>今天开始规划行程，找到最适合的方案</h3>
+      </section>
+      <section class="google-map">
+        <h3>日本地理位置</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil eaque unde modi et. Inventore voluptas, facere recusandae ipsam mollitia neque expedita quo illum veritatis dolorum adipisci iusto est sint excepturi.</p>
+        <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13091228.771215716!2d126.00520599223493!3d36.76814985109836!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34674e0fd77f192f%3A0xf54275d47c665244!2z5pel5pys!5e0!3m2!1szh-CN!2shk!4v1726910501131!5m2!1szh-CN!2shk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </section>
     </main>
+    <footer>
+      <section class="logo">
+        <img src="./images/網站Logo.svg" alt="log"/>
+        <h3>2024日本旅游推荐</h3>
+      </section>
+      <section class="links">
+        <a href="#"><img src="./Icons/facebook.svg" alt="facebook"/></a>
+        <a href="#"><img src="./Icons/instagram.svg" alt="instagram"/></a>
+        <a href="#"><img src="./Icons/twitter.svg" alt="twitter"/></a>
+        <a href="#"><img src="./Icons/youtube.svg" alt="youtube"/></a>
+      </section>
+    </footer>
+
+
+    <script>
+      setInterval(() => {
+        let topBackground = document.querySelector("section.background-img");
+        if (
+          topBackground.style.backgroundImage == 'url("../images/日本櫻花.jpg")'
+        )
+      {
+         topBackground.style.backgroundImage = 'url("../images/京都古城.jpg")';
+      } else if (
+        topBackground.style.backgroundImage == 'url("../images/京都古城.jpg")'
+      ) 
+      {
+        topBackground.style.backgroundImage = 'url("../images/大阪街頭.jpg")';
+      } else {
+        topBackground.style.backgroundImage = 'url("../images/日本櫻花.jpg")';
+      }
+    }, 2000);
+    </script>
   </body>
 </html>
