@@ -27,15 +27,60 @@ snake[3] = {
   y: 0,
 };
 
-for (let i = 0; i < snake.length; i++) {
-  if (i == 0) {
-    ctx.fillStyle = "lightgreen";
-  } else {
-    ctx.fillStyle = "lightblue";
+window.addEventListener("keydown", changeDirection);
+let d = "Right";
+function changeDirection(e) {
+  if (e.key == "ArrowLeft") {
+    console.log("left");
+  } else if (e.key == "ArrowRight") {
+    console.log("Right");
+  } else if (e.key == "ArrowUp") {
+    console.log("Up");
+  } else if (e.key == "ArrowDown") {
+    console.log("Down");
   }
-  ctx.strokeStyle = "white";
-
-  // x, y, width, height
-  ctx.fillRect(snake[i].x, snake[i].y, unit, unit);
-  ctx.strokeRect(snake[i].x, snake[i].y, unit, unit);
 }
+
+function draw() {
+  //在每一次draw的时候，背景设置为黑色
+  ctx.fillStyle = "black";
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+  //画出蛇
+  for (let i = 0; i < snake.length; i++) {
+    if (i == 0) {
+      ctx.fillStyle = "lightgreen";
+    } else {
+      ctx.fillStyle = "lightblue";
+    }
+    ctx.strokeStyle = "white";
+
+    // x, y, width, height
+    ctx.fillRect(snake[i].x, snake[i].y, unit, unit);
+    ctx.strokeRect(snake[i].x, snake[i].y, unit, unit);
+  }
+
+  //以目前的d变数方向，来决定蛇的下一帧数放在哪个坐标
+  let snakeX = snake[0].x; //snaker[0].x 是一个number, 所以snakeX不是reference data type
+  let snakeY = snake[0].y;
+  if (d == "Left") {
+    snakeX -= unit;
+  } else if (d == "Right") {
+    snakeX += unit;
+  } else if (d == "Up") {
+    snakeY += unit;
+  } else if (d == "Down") {
+    snakeY -= unit;
+  }
+
+  let newHead = {
+    x: snakeX,
+    y: snakeY,
+  };
+
+  //如果吃到果实
+  snake.pop();
+  snake.unshift(newHead);
+}
+
+let myGame = setInterval(draw, 100);
